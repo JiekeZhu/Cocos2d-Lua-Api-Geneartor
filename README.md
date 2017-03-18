@@ -24,8 +24,9 @@ Follow these steps to generate the Cocos2d-Lua API files which can be used by Be
 >   cocos new ProjectName -p com.company.projectname -d ProjectDir -l lua.  
 >   1) Modify cocos2d-x-3.14.1\tools\tolua\genbindings.py according to your NDK. I have llvm-3.6 and llvm-3.5 in my NDK's toolchains folder.  
 >   After this step, I can successfully generate the luabinding codes and the lua official doc files.  
->    // Part1
->    if platform == 'win32':  
+>    // Part1  
+
+<pre>    if platform == 'win32':  
 >        x86_llvm_path = os.path.abspath(os.path.join(ndk_root, 'toolchains/llvm-3.6/prebuilt', '%s' % cur_platform))  
 >        if not os.path.exists(x86_llvm_path):  
 >            x86_llvm_path = os.path.abspath(os.path.join(ndk_root, 'toolchains/llvm-3.5/prebuilt', '%s' % cur_platform))  
@@ -37,7 +38,7 @@ Follow these steps to generate the Cocos2d-Lua API files which can be used by Be
 >    x64_llvm_path = os.path.abspath(os.path.join(ndk_root, 'toolchains/llvm-3.6/prebuilt', '%s-%s' % (cur_platform, 'x86_64')))  
 >    if not os.path.exists(x64_llvm_path):  
 >        x64_llvm_path = os.path.abspath(os.path.join(ndk_root, 'toolchains/llvm-3.5/prebuilt', '%s-%s' % (cur_platform, 'x86_64')))  
->    
+</pre>    
 >     
 >   // Part2
 >   if '3.6' in llvm_path:
